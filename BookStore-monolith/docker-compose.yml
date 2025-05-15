@@ -18,6 +18,8 @@ services:
 
   flaskapp:
     build: .
+    volumes:
+      - /mnt/shared:/app/uploads
     restart: always
     environment:
       - FLASK_ENV=development
